@@ -13,7 +13,7 @@ function Header() {
           <div class="py-4 hidden md:block">
             <ul class="flex justify-center space-x-6">
               <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Home</li>
-              <li class="text-lg font-semibold text-white ho ver:text-green-400 cursor-pointer">Course</li>
+              <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Course</li>
               <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Contact</li>
               <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">About</li>
             </ul>
