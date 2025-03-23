@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
     <div className='max-w-screen-2xl container mx-auto flex flex-row justify-between mt-2'>
-        <div className='text-2xl text-white font-bold'><a href='#'>Read<span className='text-green-500 hover:text-white'>Net</span></a></div>
+        <div className='text-2xl text-white font-bold'><a href='#'>Future<span className='text-green-500 hover:text-white'>Net</span></a></div>
 
         <div className='flex justify-center space-x-6'>
           {/*Desktop View */}
