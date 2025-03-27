@@ -5,17 +5,17 @@ function Header() {
   
   return (
     <>
-    <div className='max-w-screen-2xl container mx-auto flex flex-row justify-between mt-2'>
+    <div className='max-w-screen-2xl container mx-auto flex flex-row justify-between mt-2 '>
         <div className='text-2xl text-white font-bold'><a href='#'>Future<span className='text-green-500 hover:text-white'>Net</span></a></div>
 
         <div className='flex justify-center space-x-6'>
           {/*Desktop View */}
-          <div class="py-4 hidden md:block">
-            <ul class="flex justify-center space-x-6">
-              <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Home</li>
-              <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Course</li>
-              <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">Contact</li>
-              <li class="text-lg font-semibold text-white hover:text-green-400 cursor-pointer">About</li>
+          <div className="py-4 hidden md:block">
+            <ul className="flex justify-center space-x-6">
+              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a href='/'>Home</a></li>
+              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a href='/course'>Course</a></li>
+              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a>Contact</a></li>
+              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a>about</a></li>
             </ul>
           </div>
 

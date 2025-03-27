@@ -33,7 +33,7 @@ function Banner() {
       {/* Image Section */}
       <div className='w-full md:w-1/2 order-1 md:order-2 mt-20 md:mt-0 flex justify-center'>
         <img className='rounded-xl' 
-          src="https://images.pexels.com/photos/7616700/pexels-photo-7616700.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
+          src="https://media.istockphoto.com/id/1253686056/vector/education-online-student-girl-student-watching-virtual-class-on-computer-with-books-vector.jpg?s=2048x2048&w=is&k=20&c=u0R1wNqfG2RVieNFkURz6cscX2GC0_UsiXKQ8NJoHl4=" 
           alt="Aluminium" 
         />
       </div>

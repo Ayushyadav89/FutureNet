@@ -1,0 +1,54 @@
+[
+    {
+        "id" :1,
+        "name" : "Generative AI",
+        "title" : "Generative AI: Create content, synthesize information, and learn faster than ever with effective prompt engineering!",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/1476380310/vector/artificial-intelligence-ai-text-in-center-and-moving-blue-waves-machine-learning-and-data.jpg?s=2048x2048&w=is&k=20&c=j5CGTbj-4Y_LI6Qnii5DAYYlBdpNz-jh5F9lsOjvN-k="
+    },
+    
+    {
+        "id" :2,
+        "name" : "Complete Data Science Training",
+        "title" : "Complete Data Science Training: Math, Statistics, Python, Advanced Statistics in Python, Machine and Deep Learning.",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/2164818515/vector/digital-brain-with-data-analysis-interface.jpg?s=2048x2048&w=is&k=20&c=-FF5FjNVDxvUYCyvloospgwcDkj31JFYpvkUeh7LnJ8="
+    },
+
+    {
+        "id" :3,
+        "name" : "Machine Learning",
+        "title" : "Learn to use Machine Learning, SciKit-Learn, Deep Learning, Natural Language Processing.",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/2050481773/photo/natural-language-processing-nlp.jpg?s=2048x2048&w=is&k=20&c=TqI_cNgtHwBhz3wGMju-uqhfqbKiMplJzZaMxJGLRRQ="
+    },
+    {
+        "id" :4,
+        "name" : "Web Development",
+        "title" : "Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps.",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/2187831392/vector/computer-in-progress.jpg?s=2048x2048&w=is&k=20&c=rfIEm-hRayKbblj1_YQeAnunnmhFzqy03bUY3hxRH9c="
+    },
+
+    {
+        "id" :5,
+        "name" : "Machine Learning",
+        "title" : "Learn to use Machine Learning, Spacy, NLTK, SciKit-Learn, Deep Learning, and more to conduct Natural Language Processing.",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/2050481773/photo/natural-language-processing-nlp.jpg?s=2048x2048&w=is&k=20&c=TqI_cNgtHwBhz3wGMju-uqhfqbKiMplJzZaMxJGLRRQ="
+    },
+
+    {
+        "id" :6,
+        "name" : "Generative AI",
+        "title" : "Generative AI: Create content, synthesize information, and learn faster than effective prompt engineering!",
+        "price" : 0,
+        "category" :"Free",
+        "image" : "https://media.istockphoto.com/id/1476380310/vector/artificial-intelligence-ai-text-in-center-and-moving-blue-waves-machine-learning-and-data.jpg?s=2048x2048&w=is&k=20&c=j5CGTbj-4Y_LI6Qnii5DAYYlBdpNz-jh5F9lsOjvN-k="
+    }
+]
