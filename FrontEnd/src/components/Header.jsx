@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Login from './Login';
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -36,7 +37,13 @@ function Header() {
             </label>
           </div>
 
-          <div className='hidden md:block border-2 bg-green-500 rounded-2xl items-center text-xl font-bold px-3 py-3 text-white hover:text-green-500 hover:bg-white'><a href='#'>Login</a></div>
+          <div className='hidden md:block border-2 bg-green-500 rounded-2xl items-center text-xl font-bold px-3 py-3 text-white hover:text-green-500 hover:bg-white'>
+            <a 
+            onClick={() =>
+              document.getElementById("my_modal_3").showModal()
+            }>Login</a>
+            <Login />
+          </div>
           
         </div>
 
@@ -63,7 +70,11 @@ function Header() {
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Contact</li>
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>About</li>
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer border-t pt-4'>
-              <a href='#' className='block text-center'>Login</a>
+            <a 
+            onClick={() =>
+              document.getElementById("my_modal_3").showModal()
+            }>Login</a>
+            <Login />
             </li>
           </ul>
         </div>
