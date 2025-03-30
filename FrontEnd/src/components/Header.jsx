@@ -69,13 +69,16 @@ function Header() {
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Course</li>
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Contact</li>
             <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>About</li>
-            <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer border-t pt-4'>
-            <a 
-            onClick={() =>
-              document.getElementById("my_modal_3").showModal()
-            }>Login</a>
-            <Login />
+            
+            <li className='border-t pt-4'>
+              <button 
+                className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer w-full text-left' 
+                onClick={() => document.getElementById("my_modal_3").showModal()}
+              >
+                Login
+              </button>
             </li>
+            <Login />
           </ul>
         </div>
       )}

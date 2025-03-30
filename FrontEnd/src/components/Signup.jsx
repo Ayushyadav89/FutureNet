@@ -1,22 +1,50 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 function Signup() {
+  const {
+      register,
+      handleSubmit,
+      formState: { errors },
+    } = useForm();
+  
+    const onSubmit = async (data) => {
+      console.log(data);
+    };
+
   return (
     <>
-    <div>
-    <div id="my_modal_3" className="modal">
-        <div className="modal-box">
-          <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
+    <div className='flex h-screen items-center justify-center'>
+        <div className='border-[2px] shadow-md px-8 py-5 rounded-xl text-white'>
+          <form onSubmit={handleSubmit(onSubmit)}>
             {/* if there is a button in form, it will close the modal */}
             <Link
               to="/"
-              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
-              onClick={() => document.getElementById("my_modal_3").close()}
+              className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 bg-slate-100"
             >
               ✕
             </Link>
 
-            <h3 className="font-bold text-lg">Login</h3>
+            <h3 className="font-bold text-lg">SignUp</h3>
+
+            {/* Name */}
+            <div className="mt-4 space-y-2">
+              <span>Name</span>
+              <br />
+              <input
+                type="text"
+                placeholder="Enter your Name"
+                className="w-80 px-3 py-1 border rounded-md outline-none text-black"
+                {...register("name", { required: true })}
+              />
+              <br />
+              {errors.name && (
+                <span className="text-sm text-red-500">
+                  This field is required
+                </span>
+              )}
+            </div>
 
             {/* Email */}
             <div className="mt-4 space-y-2">
@@ -25,7 +53,7 @@ function Signup() {
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="w-80 px-3 py-1 border rounded-md outline-none"
+                className="w-80 px-3 py-1 border rounded-md outline-none text-black"
                 {...register("email", { required: true })}
               />
               <br />
@@ -43,7 +71,7 @@ function Signup() {
               <input
                 type="password"
                 placeholder="Enter your password"
-                className="w-80 px-3 py-1 border rounded-md outline-none"
+                className="w-80 px-3 py-1 border rounded-md outline-none text-black"
                 {...register("password", { required: true })}
               />
               <br />
@@ -57,22 +85,21 @@ function Signup() {
             {/* Button */}
             <div className="flex justify-around mt-6">
               <button className="bg-green-500 text-white rounded-md px-3 py-1 hover:bg-green-700 duration-200">
-                Login
+                SignUp
               </button>
               <p>
-                Not registered?{" "}
+                Have Account?{" "}
                 <Link
-                  to="/signup"
+                  to="/"
                   className="underline text-blue-500 cursor-pointer"
                 >
-                  Signup
+                  Login
                 </Link>{" "}
               </p>
             </div>
           </form>
         </div>
       </div>
-    </div>
     </>
   )
 }
