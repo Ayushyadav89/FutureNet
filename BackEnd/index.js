@@ -1,8 +1,14 @@
 import express from "express";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
+
+import courseRoute from "./route/course.route.js"
 
 const app = express()
+
+app.use(cors())
+app.use(express.json())
 
 dotenv.config();
 
@@ -19,6 +25,9 @@ catch (error) {
   process.exit(1);
 }
 
+// defining Routes
+app.use("/course", courseRoute)
+
 app.listen(port, () => {
-  console.log(`server listning on https://localhost:${port}`)
+  console.log(`server listning on http://localhost:${port}`)
 })
