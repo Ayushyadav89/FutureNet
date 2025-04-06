@@ -3,7 +3,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import courseRoute from "./route/course.route.js"
+import courseRoute from "./route/course.route.js";
+import userRoute from "./route/user.route.js";
 
 const app = express()
 
@@ -27,6 +28,7 @@ catch (error) {
 
 // defining Routes
 app.use("/course", courseRoute)
+app.use("/user", userRoute)
 
 app.listen(port, () => {
   console.log(`server listning on http://localhost:${port}`)
