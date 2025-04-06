@@ -1,93 +1,131 @@
-import React, { useState } from 'react';
-import Login from './Login';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import Login from "./Login";
+import Logout from "./Logout";
+import { useAuth } from "../context/AuthProvider";
 
-function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+function Navbar() {
+  const [authUser, setAuthUser] = useAuth();
   
+  const element = document.documentElement;
+
+  const [sticky, setSticky] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const navItems = (
+    <>
+      <li className="hover:text-green-500">
+        <a href="/">Home</a>
+      </li>
+      <li className="hover:text-green-500">
+        <a href="/course">Course</a>
+      </li>
+      <li className="hover:text-green-500">
+        <a>Contact</a>
+      </li>
+      <li className="hover:text-green-500">
+        <a>About</a>
+      </li>
+    </>
+  );
   return (
     <>
-    <div className='max-w-screen-2xl container mx-auto flex flex-row justify-between mt-2 '>
-        <div className='text-2xl text-white font-bold'><a href='#'>Future<span className='text-green-500 hover:text-white'>Net</span></a></div>
-
-        <div className='flex justify-center space-x-6'>
-          {/*Desktop View */}
-          <div className="py-4 hidden md:block">
-            <ul className="flex justify-center space-x-6">
-              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a href='/'>Home</a></li>
-              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a href='/course'>Course</a></li>
-              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a>Contact</a></li>
-              <li className="text-lg font-semibold text-white hover:text-green-400 cursor-pointer"><a>about</a></li>
-            </ul>
-          </div>
-
-          {/* Seach Bar*/}
-          <div className='hidden md:block mx-9 mt-2'>
-            <label className="input input-bordered flex items-center gap-2">
-              <input type="text" className="grow font-bold text-[2/3] text-black" placeholder="Search" />
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 16 16"
-                fill="currentColor"
-                className="h-9 w-4 opacity-70">
-                <path
-                  fillRule="evenodd"
-                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-                  clipRule="evenodd" />
-              </svg>
-            </label>
-          </div>
-
-          <div className='hidden md:block border-2 bg-green-500 rounded-2xl items-center text-xl font-bold px-3 py-3 text-white hover:text-green-500 hover:bg-white'>
-            <a 
-            onClick={() =>
-              document.getElementById("my_modal_3").showModal()
-            }>Login</a>
-            <Login />
-          </div>
-          
-        </div>
-
-
-        {/*Mobile View */}
-        <div className='md:hidden block'>
-        <div className='max-w-screen-2xl container mx-auto flex justify-between items-center mt-2 px-4'>
-
-      {/* Mobile View */}
-      <div className='md:hidden'>
-        <button onClick={() => setIsOpen(!isOpen)} className='text-white focus:outline-none'>
-          <svg className='w-6 h-6' fill='none' stroke='currentColor' strokeWidth='2' viewBox='0 0 24 24'>
-            <path strokeLinecap='round' strokeLinejoin='round' d='M4 6h16M4 12h16M4 18h16' />
-          </svg>
-        </button>
-      </div>
-
-      {/* Dropdown Menu */}
-      {isOpen && (
-        <div className='absolute top-16 left-0 w-full bg-gray-800 shadow-lg z-50 md:hidden'>
-          <ul className='flex flex-col space-y-4 p-4'>
-            <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Home</li>
-            <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Course</li>
-            <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>Contact</li>
-            <li className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer'>About</li>
-            
-            <li className='border-t pt-4'>
-              <button 
-                className='text-lg font-semibold text-white hover:text-green-400 cursor-pointer w-full text-left' 
-                onClick={() => document.getElementById("my_modal_3").showModal()}
+      <div
+        className={` max-w-screen-2xl container mx-auto md:px-20 px-4 dark:bg-slate-800 text-white fixed top-0 left-0 right-0 z-50 ${
+          sticky
+            ? "sticky-navbar shadow-md bg-slate-700 duration-300 transition-all ease-in-out"
+            : ""
+        }`}
+      >
+        <div className="navbar ">
+          <div className="navbar-start">
+            <div className="dropdown">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost lg:hidden"
               >
-                Login
-              </button>
-            </li>
-            <Login />
-          </ul>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm text-black dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                {navItems}
+              </ul>
+            </div>
+            <a className=" text-2xl font-bold cursor-pointer">Future<span className="text-green-400">Net</span></a>
+          </div>
+          <div className="navbar-end space-x-3">
+            <div className="navbar-center hidden lg:flex">
+              <ul className="menu menu-horizontal px-1 text-xl">{navItems}</ul>
+            </div>
+            <div className="hidden md:block">
+              <label className=" px-3 py-2 border rounded-md flex items-center gap-2">
+                <input
+                  type="text"
+                  className="grow outline-none rounded-md px-1 dark:bg-slate-900 text-black"
+                  placeholder="Search"
+                />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="w-4 h-4 opacity-70"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </label>
+            </div>
+
+            {authUser ? (
+              <Logout />
+            ) : (
+              <div className="">
+                <a
+                  className="bg-black text-white px-3 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer"
+                  onClick={() =>
+                    document.getElementById("my_modal_3").showModal()
+                  }
+                >
+                  Login
+                </a>
+                <Login />
+              </div>
+            )}
+          </div>
         </div>
-      )}
-    </div>
-        </div>
-        
       </div>
     </>
-  )
+  );
 }
 
-export default Header
+export default Navbar;
