@@ -12,14 +12,33 @@ function Login() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log(data);
+    const userInfo = {
+      email:data.email,
+      password: data.password
+    }
+
+    await axios.post("http://localhost:3000/user/login", userInfo)
+    .then((res) => {
+      console.log(res.data);
+      if(res.data) {
+        toast.success("LoggedIn Successfully");
+      }
+
+      localStorage.setItem("Users", JSON.stringify(res.data.user))
+    })
+    .catch((err) => {
+      if(err.response) {
+        console.log(err);
+        toast.error("Error: " + err.response.data.message);
+      }
+    })
   };
 
   return (
     <div>
       <dialog id="my_modal_3" className="modal">
         <div className="modal-box">
-          <form method="dialog" onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} method="dialog">
             {/* if there is a button in form, it will close the modal */}
             <Link
               to="/"
@@ -30,7 +49,6 @@ function Login() {
             </Link>
 
             <h3 className="font-bold text-lg">Login</h3>
-
             {/* Email */}
             <div className="mt-4 space-y-2">
               <span>Email</span>
@@ -48,7 +66,6 @@ function Login() {
                 </span>
               )}
             </div>
-
             {/* password */}
             <div className="mt-4 space-y-2">
               <span>Password</span>
