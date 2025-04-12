@@ -1,54 +1,145 @@
 [
     {
-        "id" :7,
-        "name" : "Generative AI",
-        "title" : "Generative AI: Create content, synthesize information, and learn faster than ever with effective prompt engineering!",
-        "price" : 1999,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/1476380310/vector/artificial-intelligence-ai-text-in-center-and-moving-blue-waves-machine-learning-and-data.jpg?s=2048x2048&w=is&k=20&c=j5CGTbj-4Y_LI6Qnii5DAYYlBdpNz-jh5F9lsOjvN-k="
-    },
-    
-    {
-        "id" :8,
-        "name" : "Complete Data Science Training",
-        "title" : "Complete Data Science Training: Math, Statistics, Python, Advanced Statistics in Python, Machine and Deep Learning.",
-        "price" : 499,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/2164818515/vector/digital-brain-with-data-analysis-interface.jpg?s=2048x2048&w=is&k=20&c=-FF5FjNVDxvUYCyvloospgwcDkj31JFYpvkUeh7LnJ8="
-    },
-
-    {
-        "id" :9,
-        "name" : "Machine Learning",
-        "title" : "Learn to use Machine Learning, SciKit-Learn, Deep Learning, Natural Language Processing.",
-        "price" : 199,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/2050481773/photo/natural-language-processing-nlp.jpg?s=2048x2048&w=is&k=20&c=TqI_cNgtHwBhz3wGMju-uqhfqbKiMplJzZaMxJGLRRQ="
+        "id": 1,
+        "name": "Generative AI Mastery",
+        "title": "Unlock the power of Generative AI with real-world projects, hands-on labs, and prompt engineering techniques.",
+        "price": 1500,
+        "category": "Paid",
+        "image": "https://media.istockphoto.com/id/1660821856/photo/generative-ai.jpg?s=2048x2048&w=is&k=20&c=r9CXIOCcrNU-phHWLUbbsr4qrm9ly6ro6m6RlxLk0Uw="
     },
     {
-        "id" :10,
-        "name" : "Web Development",
-        "title" : "Become a Full-Stack Web Developer with just ONE course. HTML, CSS, Javascript, Node, React, PostgreSQL, Web3 and DApps.",
-        "price" : 399,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/2187831392/vector/computer-in-progress.jpg?s=2048x2048&w=is&k=20&c=rfIEm-hRayKbblj1_YQeAnunnmhFzqy03bUY3hxRH9c="
+        "id": 2,
+        "name": "Python for Data Analysis",
+        "title": "Master Python, NumPy, Pandas, and Matplotlib to clean, analyze, and visualize real-world datasets.",
+        "price": 799,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
-
     {
-        "id" :11,
-        "name" : "Machine Learning",
-        "title" : "Learn to use Machine Learning, Spacy, NLTK, SciKit-Learn, Deep Learning, and more to conduct Natural Language Processing.",
-        "price" : 999,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/2050481773/photo/natural-language-processing-nlp.jpg?s=2048x2048&w=is&k=20&c=TqI_cNgtHwBhz3wGMju-uqhfqbKiMplJzZaMxJGLRRQ="
+        "id": 3,
+        "name": "Frontend Development Bootcamp",
+        "title": "Learn HTML, CSS, JavaScript, and responsive design to build beautiful, interactive websites from scratch.",
+        "price": 599,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     },
-
     {
-        "id" :12,
-        "name" : "Generative AI",
-        "title" : "Generative AI: Create content, synthesize information, and learn faster than effective prompt engineering!",
-        "price" : 1599,
-        "category" :"Paid",
-        "image" : "https://media.istockphoto.com/id/1476380310/vector/artificial-intelligence-ai-text-in-center-and-moving-blue-waves-machine-learning-and-data.jpg?s=2048x2048&w=is&k=20&c=j5CGTbj-4Y_LI6Qnii5DAYYlBdpNz-jh5F9lsOjvN-k="
+        "id": 4,
+        "name": "Backend with Node & Express",
+        "title": "Build scalable backend applications using Node.js, Express, MongoDB, and RESTful APIs.",
+        "price": 699,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/11035380/pexels-photo-11035380.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 5,
+        "name": "Complete DevOps Guide",
+        "title": "Become a DevOps Engineer: Docker, Kubernetes, Jenkins, CI/CD pipelines, and AWS deployment.",
+        "price": 1299,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 6,
+        "name": "Machine Learning A-Z",
+        "title": "From linear regression to deep learning, master machine learning using Python and real-world datasets.",
+        "price": 999,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"    },
+    {
+        "id": 7,
+        "name": "Cybersecurity Fundamentals",
+        "title": "Understand key cybersecurity concepts, ethical hacking, encryption, firewalls, and threat analysis.",
+        "price": 899,
+        "category": "Paid",
+        "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 8,
+        "name": "Cloud Computing with AWS",
+        "title": "Learn AWS EC2, S3, RDS, IAM, and deploy full-stack applications using cloud infrastructure.",
+        "price": 1099,
+        "category": "Paid",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 9,
+        "name": "UI/UX Design Essentials",
+        "title": "Learn design principles, wireframing, prototyping, and Figma to design user-friendly interfaces.",
+        "price": 499,
+        "category": "Paid",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 10,
+        "name": "Android App Development",
+        "title": "Build Android apps using Java and Kotlin with hands-on projects and modern UI design practices.",
+        "price": 799,
+        "category": "Paid",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 11,
+        "name": "Data Structures & Algorithms",
+        "title": "Ace coding interviews with mastery over DSA topics like arrays, trees, graphs, and dynamic programming.",
+        "price": 699,
+        "category": "Paid",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 12,
+        "name": "Blockchain for Beginners",
+        "title": "Understand the core concepts of blockchain, smart contracts, Ethereum, and decentralized apps.",
+        "price": 599,
+        "category": "Paid",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 13,
+        "name": "Introduction to AI",
+        "title": "Discover the fundamentals of Artificial Intelligence and explore how machines think and learn.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 14,
+        "name": "Python Basics",
+        "title": "Start your coding journey by learning Python syntax, variables, loops, and functions.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 15,
+        "name": "Getting Started with Machine Learning",
+        "title": "A beginner-friendly course to introduce you to machine learning and basic model building.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 16,
+        "name": "Web Development Fundamentals",
+        "title": "Learn the core concepts of building websites using HTML, CSS, and JavaScript.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 17,
+        "name": "Prompt Engineering Basics",
+        "title": "Understand how to craft effective prompts to leverage the full power of Generative AI tools.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    },
+    {
+        "id": 18,
+        "name": "Data Science Overview",
+        "title": "An overview of Data Science workflows, tools, and real-world use cases to get you started.",
+        "price": 0,
+        "category": "Free",
+         "image": "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     }
 ]
