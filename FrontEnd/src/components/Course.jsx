@@ -10,7 +10,7 @@ function Course() {
   useEffect(() => {
     const getCourse = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/course");
+        const res = await axios.get("https://futurenet.onrender.com/course");
         console.log(res.data);
         setCourses(res.data);
       } catch (error) {

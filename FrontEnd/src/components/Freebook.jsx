@@ -13,7 +13,7 @@ function Freebook() {
   useEffect(() => {
     const getCourse = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/course");
+        const res = await axios.get("https://futurenet.onrender.com/course");
 
         const data = res.data.filter((data) => data.category === "Free");
         console.log(data);
